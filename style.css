@@ -1,6 +1,6 @@
 /* ===========================
-   PRIMEHUB 3.0
-   =========================== */
+   PRIMEHUB 4.0
+=========================== */
 
 *{
     margin:0;
@@ -15,35 +15,36 @@ html{
 
 body{
     background:#050505;
-    color:white;
+    color:#ffffff;
     line-height:1.8;
 }
+
+/* HEADER */
 
 header{
     position:fixed;
     top:0;
-    left:0;
     width:100%;
-    background:#000;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:20px 10%;
+    background:#000;
     border-bottom:2px solid #00bfff;
     z-index:1000;
 }
 
 .logo{
-    font-size:32px;
-    color:#00bfff;
+    font-size:30px;
     font-weight:bold;
+    color:#00bfff;
     text-shadow:0 0 15px #00bfff;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
+    margin-left:20px;
     transition:.3s;
 }
 
@@ -51,70 +52,104 @@ nav a:hover{
     color:#00bfff;
 }
 
+/* HERO */
+
 .hero{
-    height:100vh;
+    min-height:100vh;
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    flex-direction:column;
-    text-align:center;
-    padding:20px;
-    background:linear-gradient(180deg,#000,#06162b);
+    flex-wrap:wrap;
+    gap:40px;
+    padding:120px 10% 80px;
+    background:linear-gradient(180deg,#000,#08192d);
 }
 
-.hero h1{
-    font-size:70px;
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:60px;
     color:#00bfff;
-    text-shadow:0 0 25px #00bfff;
+    text-shadow:0 0 20px #00bfff;
 }
 
-.hero p{
-    margin-top:20px;
-    max-width:700px;
-    font-size:20px;
-    color:#ddd;
+.hero-text h2{
+    margin-top:10px;
+    color:white;
 }
+
+.hero-text p{
+    margin-top:20px;
+    font-size:18px;
+    color:#dddddd;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #00bfff;
+    box-shadow:0 0 30px #00bfff;
+    transition:.4s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 45px #00bfff;
+}
+
+/* BUTTON */
 
 .btn{
-    margin-top:35px;
     display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
     background:#00bfff;
     color:white;
-    padding:15px 40px;
-    border-radius:40px;
     text-decoration:none;
-    font-weight:bold;
+    border-radius:40px;
     transition:.3s;
 }
 
 .btn:hover{
-    transform:scale(1.08);
-    box-shadow:0 0 25px #00bfff;
+    background:#0088cc;
+    transform:translateY(-3px);
 }
+
+/* SECTIONS */
 
 section{
-    padding:100px 10%;
+    padding:90px 10%;
 }
 
-h2{
+section h2{
     text-align:center;
     color:#00bfff;
-    margin-bottom:40px;
-    font-size:40px;
+    margin-bottom:30px;
 }
+
+/* CARDS */
 
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    gap:20px;
 }
 
 .card{
     background:#111;
-    padding:25px;
-    border-radius:20px;
     border:1px solid #00bfff;
-    transition:.4s;
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
 }
 
 .card:hover{
@@ -127,6 +162,8 @@ h2{
     margin-bottom:15px;
 }
 
+/* CONTACT */
+
 #contact{
     text-align:center;
 }
@@ -136,22 +173,26 @@ h2{
     text-decoration:none;
 }
 
+#contact a:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+
 footer{
     background:#000;
     text-align:center;
-    padding:30px;
+    padding:25px;
     border-top:2px solid #00bfff;
-    margin-top:50px;
 }
 
-footer p{
-    color:#bbb;
-}
+/* MOBILE */
 
 @media(max-width:768px){
 
 header{
     flex-direction:column;
+    padding:20px;
 }
 
 nav{
@@ -160,15 +201,25 @@ nav{
 
 nav a{
     display:inline-block;
-    margin:10px;
+    margin:8px;
 }
 
-.hero h1{
-    font-size:45px;
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
 }
 
-.hero p{
-    font-size:17px;
+.hero-text h1{
+    font-size:42px;
+}
+
+.hero-text h2{
+    font-size:24px;
+}
+
+.hero-image img{
+    width:180px;
+    height:180px;
 }
 
 }
