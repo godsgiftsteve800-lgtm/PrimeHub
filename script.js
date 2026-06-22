@@ -1,15 +1,25 @@
-console.log("Welcome to PrimeHub!");
+// ===========================
+// PRIMEHUB 3.0
+// ===========================
 
-document.querySelectorAll("nav a").forEach(link=>{
-    link.addEventListener("click",function(e){
+console.log("Welcome to PrimeHub 🚀");
+
+// Smooth scrolling
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const target=document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(this.getAttribute('href'));
 
-        if(target){
+        if (target) {
             target.scrollIntoView({
-                behavior:"smooth"
+                behavior: 'smooth'
             });
         }
     });
 });
+
+// Welcome message
+window.onload = function () {
+    console.log("PrimeHub Loaded Successfully!");
+};
