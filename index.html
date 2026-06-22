@@ -1,119 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrimeHub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeHub | Engineering Tomorrow, Building Today</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:#000;
-    color:white;
-}
-
-header{
-    background:#0a0a0a;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:2px solid #00aaff;
-}
-
-.logo{
-    color:#00aaff;
-    font-size:28px;
-    font-weight:bold;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-}
-
-.hero{
-    height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    background:linear-gradient(to bottom,#000,#001f3f);
-}
-
-.hero h1{
-    font-size:48px;
-    color:#00aaff;
-}
-
-.hero p{
-    margin-top:15px;
-    font-size:18px;
-    width:80%;
-    max-width:600px;
-}
-
-button{
-    margin-top:30px;
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    background:#00aaff;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#0088cc;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    border-top:2px solid #00aaff;
-}
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-<div class="logo">PrimeHub</div>
+    <div class="logo">PrimeHub</div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</nav>
-
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
 
-<h1>Welcome to PrimeHub</h1>
+    <h1>Welcome to PrimeHub</h1>
 
-<p>
-Building the future with technology, innovation and creativity.
-PrimeHub is your destination for websites, AI, trading resources and digital solutions.
-</p>
+    <p>
+        Engineering Tomorrow, Building Today.
+    </p>
 
-<button>Get Started</button>
+    <p>
+        PrimeHub is my personal technology portfolio where I showcase my projects,
+        skills, and passion for web development, programming, engineering, and
+        artificial intelligence.
+    </p>
+
+    <a href="#about" class="btn">Explore My Journey</a>
+
+</section>
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        Hello! My name is <strong>Godsgift Steve</strong>.
+    </p>
+
+    <p>
+        I am an engineering student who loves technology,
+        programming, software development, web design,
+        and artificial intelligence.
+    </p>
+
+    <p>
+        PrimeHub was created to document my learning journey,
+        showcase my projects, and connect with people who
+        share a passion for innovation.
+    </p>
+
+</section>
+
+<section id="services">
+
+    <h2>My Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌐 Website Development</h3>
+            <p>Building modern, responsive and professional websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Programming</h3>
+            <p>Creating software solutions and learning new technologies.</p>
+        </div>
+
+        <div class="card">
+            <h3>🤖 Artificial Intelligence</h3>
+            <p>Exploring AI tools and future intelligent systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>📚 Engineering</h3>
+            <p>Applying engineering knowledge to solve real-world problems.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>PrimeHub Portfolio</h3>
+            <p>
+                My personal portfolio website hosted with GitHub Pages.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Upcoming AI Projects</h3>
+            <p>
+                AI applications and automation projects will be added soon.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Future Engineering Projects</h3>
+            <p>
+                More exciting work is coming as I continue learning.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>
+        📧 Email:
+        <a href="mailto:godsgiftsteve800@gmail.com">
+            godsgiftsteve800@gmail.com
+        </a>
+    </p>
+
+    <p>
+        📱 WhatsApp:
+        <a href="https://wa.me/2348039838010" target="_blank">
+            Chat with Me
+        </a>
+    </p>
+
+    <p>
+        💻 GitHub:
+        <a href="https://github.com/godsgiftsteve800-lgtm" target="_blank">
+            github.com/godsgiftsteve800-lgtm
+        </a>
+    </p>
+
+    <p>
+        📍 Location: Nigeria
+    </p>
 
 </section>
 
 <footer>
-© 2026 PrimeHub. All Rights Reserved.
+
+    <p>
+        © 2026 PrimeHub.
+        Designed and Developed by Godsgift Steve.
+    </p>
+
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
