@@ -1,50 +1,40 @@
-/* ===========================
-   PRIMEHUB 4.0
-=========================== */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
     font-family:Arial, Helvetica, sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    background:#050505;
-    color:#ffffff;
-    line-height:1.8;
+    background:#05070d;
+    color:white;
 }
-
-/* HEADER */
 
 header{
     position:fixed;
-    top:0;
     width:100%;
+    top:0;
+    left:0;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 10%;
+    padding:20px 8%;
     background:#000;
     border-bottom:2px solid #00bfff;
     z-index:1000;
 }
 
 .logo{
+    color:#00bfff;
     font-size:30px;
     font-weight:bold;
-    color:#00bfff;
-    text-shadow:0 0 15px #00bfff;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:20px;
+    margin-left:25px;
     transition:.3s;
 }
 
@@ -52,38 +42,69 @@ nav a:hover{
     color:#00bfff;
 }
 
-/* HERO */
-
 .hero{
     min-height:100vh;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:140px 8%;
+    gap:60px;
     flex-wrap:wrap;
-    gap:40px;
-    padding:120px 10% 80px;
-    background:linear-gradient(180deg,#000,#08192d);
 }
 
 .hero-text{
     flex:1;
 }
 
-.hero-text h1{
-    font-size:60px;
+.hero h1{
+    font-size:65px;
     color:#00bfff;
-    text-shadow:0 0 20px #00bfff;
 }
 
-.hero-text h2{
+.hero h2{
     margin-top:10px;
+    font-size:30px;
+}
+
+.hero p{
+    margin-top:20px;
+    color:#d0d0d0;
+    line-height:1.8;
+    max-width:600px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+}
+
+.btn,
+.btn2{
+    display:inline-block;
+    padding:14px 30px;
+    margin-right:15px;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.btn{
+    background:#00bfff;
     color:white;
 }
 
-.hero-text p{
-    margin-top:20px;
-    font-size:18px;
-    color:#dddddd;
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #00bfff;
+}
+
+.btn2{
+    border:2px solid #00bfff;
+    color:#00bfff;
+}
+
+.btn2:hover{
+    background:#00bfff;
+    color:white;
 }
 
 .hero-image{
@@ -92,8 +113,8 @@ nav a:hover{
 }
 
 .hero-image img{
-    width:220px;
-    height:220px;
+    width:280px;
+    height:280px;
     object-fit:cover;
     border-radius:50%;
     border:5px solid #00bfff;
@@ -103,57 +124,36 @@ nav a:hover{
 
 .hero-image img:hover{
     transform:scale(1.05);
-    box-shadow:0 0 45px #00bfff;
+    box-shadow:0 0 50px #00bfff;
 }
-
-/* BUTTON */
-
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:15px 35px;
-    background:#00bfff;
-    color:white;
-    text-decoration:none;
-    border-radius:40px;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#0088cc;
-    transform:translateY(-3px);
-}
-
-/* SECTIONS */
 
 section{
-    padding:90px 10%;
+    padding:100px 8%;
 }
 
 section h2{
     text-align:center;
+    margin-bottom:40px;
     color:#00bfff;
-    margin-bottom:30px;
+    font-size:38px;
 }
-
-/* CARDS */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
 }
 
 .card{
-    background:#111;
-    border:1px solid #00bfff;
-    border-radius:15px;
+    background:#111827;
     padding:25px;
+    border-radius:15px;
+    border:1px solid #00bfff;
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
     box-shadow:0 0 20px #00bfff;
 }
 
@@ -161,8 +161,6 @@ section h2{
     color:#00bfff;
     margin-bottom:15px;
 }
-
-/* CONTACT */
 
 #contact{
     text-align:center;
@@ -173,20 +171,12 @@ section h2{
     text-decoration:none;
 }
 
-#contact a:hover{
-    text-decoration:underline;
-}
-
-/* FOOTER */
-
 footer{
-    background:#000;
     text-align:center;
-    padding:25px;
+    padding:30px;
+    background:#000;
     border-top:2px solid #00bfff;
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
 
@@ -200,26 +190,30 @@ nav{
 }
 
 nav a{
-    display:inline-block;
     margin:8px;
 }
 
 .hero{
     flex-direction:column-reverse;
     text-align:center;
+    padding-top:180px;
 }
 
-.hero-text h1{
-    font-size:42px;
+.hero h1{
+    font-size:45px;
 }
 
-.hero-text h2{
+.hero h2{
     font-size:24px;
 }
 
 .hero-image img{
-    width:180px;
-    height:180px;
+    width:220px;
+    height:220px;
+}
+
+.hero p{
+    max-width:100%;
 }
 
 }
