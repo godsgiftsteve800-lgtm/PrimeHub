@@ -1,25 +1,29 @@
-// ===========================
-// PRIMEHUB 3.0
-// ===========================
+// PrimeHub 5.0
 
-console.log("Welcome to PrimeHub 🚀");
+console.log("Welcome to PrimeHub!");
 
-// Smooth scrolling
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+// Smooth reveal animation
+const sections = document.querySelectorAll("section");
 
-        const target = document.querySelector(this.getAttribute('href'));
-
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
         }
     });
 });
 
-// Welcome message
-window.onload = function () {
-    console.log("PrimeHub Loaded Successfully!");
-};
+sections.forEach((section) => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(40px)";
+    section.style.transition = "all 0.8s ease";
+    observer.observe(section);
+});
+
+// Update footer year automatically
+const footer = document.querySelector("footer p");
+
+if (footer) {
+    footer.innerHTML = `© ${new Date().getFullYear()} PrimeHub`;
+}
